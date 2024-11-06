@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучаем формы</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>
+            Заполните форму ниже...
+        </h2>
+        <form action="send.html" name="miForm" method="GET">
+            <fieldset>
+                <legend>
+                    Авторизация
+                </legend>
+                <label>
+                    <p>
+                        Как Вас зовут?
+                    </p>
+                    <input type="text" name="miFormName" maxlength="10" placeholder="например Вася" required>
+                </label>
+                <label for="miFormPhone">
+                    <p>
+                        Ваш телефон для связи...
+                    </p>
+                </label>
+                <input type="text" name="miFormPhone" id="miFormPhone" value="12345">
+                <input type="submit" value="Перезвонить мне">
+                <input type="reset">
+                <input type="image" src="img/button1.png">
+                <input type="button" value="Для JS">
+            </fieldset>
+            <p>
+                Один ответ из всех вариантов - Курите ли Вы?
+            </p>
+            <label>Да - <input type="radio" name="miFormSmocking" value="Yes"></label>
+            <label>Нет - <input type="radio" name="miFormSmocking" value="Not" checked></label>
+            <label>Иногда - <input type="radio" name="miFormSmocking" value="Or"></label>
+            <label>Если много выпью - <input type="radio" name="miFormSmocking" value="And"></label>
+            <hr>
+            <p>
+                Выбрать более 1-го варианта - какие газеты Вы читаете?
+            </p>
+            <label>Гомельская правда - <input type="checkbox" name="miFormPress_gp" value="gp" checked></label>
+            <label>Аргументы и факты - <input type="checkbox" name="miFormPress_aif" value="aif"></label>
+            <label>Комсомольская правда - <input type="checkbox" name="miFormPress_kp" value="kp"></label>
+            <label>Никакие - <input type="checkbox" name="miFormPress_no" value="not"></label>
+            <hr>
+            <p>Элемент выборки - Сколько часов в сутках Вы спите?</p>
+            <select name="miFormSleep" size="8" multiple>
+                <option value="0">менее 3-х часов</option>
+                <option value="3">3 часа</option>
+                <option value="4">4 часа</option>
+                <option value="5">5 часа</option>
+                <option value="6">6 часа</option>
+                <option value="7" selected>7 часа</option>
+                <option value="8">8 часа</option>
+                <option value="9">более 8 часа</option>
+            </select>
+            <hr>
+            <input name="miFormCity" list="cities" />
+            <datalist id="cities">
+                <option value="Naples" />
+                <option value="London" />
+                <option value="Berlin" />
+                <option value="New York" />
+                <option value="Frattamaggiore" />
+            </datalist>
+            <hr>
+            <p>
+                Оставьте отзыв о нас...
+            </p>
+            <textarea name="miFormText" cols="60" rows="20"></textarea>
+        </form>
+    </div>
+</body>
+</html>
